@@ -1,7 +1,9 @@
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import ImageUpload from './ImageUpload';
 import CameraCapture from './CameraCapture';
+import ChatInterface from './ChatInterface';
 
 function App() {
   return (
@@ -41,7 +43,7 @@ function App() {
           </div>
         </div>
       </main>
-
+      <ChatInterface />
       <footer className="footer">
         <div className="container">
           <span>&copy; {new Date().getFullYear()} PharmaChat. All Rights Reserved.</span>
