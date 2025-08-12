@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Tesseract from 'tesseract.js';
 
-function ImageUpload() {
+function ImageUpload({ onOcrComplete }) {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [ocrText, setOcrText] = useState('');
@@ -27,6 +27,7 @@ function ImageUpload() {
       try {
         const { data: { text } } = await Tesseract.recognize(event.target.result, 'eng');
         setOcrText(text);
+        if (onOcrComplete) onOcrComplete(text);
       } catch (err) {
         setError('OCR failed. Please try another image.');
       } finally {

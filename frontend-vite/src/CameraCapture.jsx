@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Tesseract from 'tesseract.js';
 
-function CameraCapture() {
+function CameraCapture({ onOcrComplete }) {
   const videoRef = useRef(null);
   const [capturedImage, setCapturedImage] = useState(null);
   const [isCameraOn, setIsCameraOn] = useState(false);
@@ -67,6 +67,7 @@ function CameraCapture() {
     Tesseract.recognize(dataUrl, 'eng')
       .then(({ data: { text } }) => {
         setOcrText(text);
+        if (onOcrComplete) onOcrComplete(text);
       })
       .catch(() => {
         setError('OCR failed. Please try again.');

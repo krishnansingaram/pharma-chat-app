@@ -16,6 +16,7 @@
    - Design UI for uploading prescription images
    - Integrate camera capture functionality (web/mobile as applicable)
    - Validate and preview uploaded/captured images
+   - Add zoom button to enlarg the preview prescreption image.
 
 3. **OCR Integration**
    - Integrate OCR library/service (e.g., Tesseract, Google Vision API)
@@ -25,7 +26,7 @@
 4. **AI Extraction of Medication Details**
    - Parse OCR output to identify medication names, dosages, and instructions
    - Implement basic AI/NLP logic for entity extraction
-   - Store extracted data in a structured format
+   - Integrate the AI module(e.g., OpenAI)
 
 5. **Testing & Validation**
    - Test with sample prescription images
