@@ -4,6 +4,7 @@ import './index.css';
 import ImageUpload from './ImageUpload';
 import CameraCapture from './CameraCapture';
 import ChatInterface from './ChatInterface';
+import LottieAnimation from './LottieAnimation';
 
 function App() {
   const [isOcrComplete, setIsOcrComplete] = useState(false);
@@ -22,8 +23,15 @@ function App() {
 
       <header className="hero-section">
         <div className="container">
-          <h1>Welcome to PharmaChat</h1>
-          <p>Your AI-powered assistant for prescriptions and medication.</p>
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h1 className="hero-title">Welcome to PharmaChat</h1>
+              <p className="hero-subtitle">Your AI-powered assistant for prescriptions and medication.</p>
+            </div>
+            <div className="col-md-6">
+              <LottieAnimation />
+            </div>
+          </div>
         </div>
       </header>
 
