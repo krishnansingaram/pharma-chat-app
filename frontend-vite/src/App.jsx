@@ -48,7 +48,7 @@ function App() {
                 </div>
               ) : (
                 <div className="card h-100">
-                  <div className="card-body d-flex flex-column">
+                  <div className="card-body d-flex flex-column chat-card-body">
                     <h5 className="card-title text-center mb-4">Chat</h5>
                     <ChatInterface ocrText={ocrText} />
                   </div>
